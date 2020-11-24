@@ -46,7 +46,7 @@ public class AirportTest {
 
     @Test
     public void testGetBomberMilitaryPlanes() {
-        Assert.assertEquals(new Airport(planes).getTransportMilitaryPlanes().get(0)
+        Assert.assertEquals(new Airport(planes).getBomberMilitaryPlanes().get(0)
                 .getMilitaryType(), MilitaryType.BOMBER);
     }
 
