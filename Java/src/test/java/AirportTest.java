@@ -61,17 +61,17 @@ public class AirportTest {
 
     @Test
     public void testIsAirportPlanesSortedByMaxDistance() {
-        Airport airport = new Airport(planes).sortByMaxLoadCapacity();
-        List<? extends Plane> planesSortedByMaxLoadCapacity = airport.getPlanes();
-        assertThat(planesSortedByMaxLoadCapacity)
+        Airport airport = new Airport(planes).sortByMaxDistance();
+        List<? extends Plane> planesSortedByMaxDistance = airport.getPlanes();
+        assertThat(planesSortedByMaxDistance)
                 .isSortedAccordingTo(Comparator.comparingInt(Plane::getMaxFlightDistance));
     }
 
     @Test
     public void testIsAirportPlanesSortedByMaxSpeed() {
-        Airport airport = new Airport(planes).sortByMaxLoadCapacity();
-        List<? extends Plane> planesSortedByMaxLoadCapacity = airport.getPlanes();
-        assertThat(planesSortedByMaxLoadCapacity)
+        Airport airport = new Airport(planes).sortByMaxSpeed();
+        List<? extends Plane> planesSortedByMaxSpeed = airport.getPlanes();
+        assertThat(planesSortedByMaxSpeed)
                 .isSortedAccordingTo(Comparator.comparingInt(Plane::getMaxSpeed));
     }
 
